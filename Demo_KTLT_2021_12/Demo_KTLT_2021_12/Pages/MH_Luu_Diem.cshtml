@@ -1,0 +1,30 @@
+﻿@page
+@model Demo_KTLT_2021_12.Pages.MH_Luu_DiemModel
+@using Demo_KTLT_2021_12.Services
+@using Demo_KTLT_2021_12.Entities
+@{
+    string chuoi = String.Empty;
+    DIEM a;
+
+    if (Request.HasFormContentType)
+    {
+        a.X = int.Parse(Request.Form["xA"]);
+        a.Y = int.Parse(Request.Form["yA"]);
+
+        bool kq = XL_Diem.LuuDiem(a);
+        chuoi = $"ket qua luu la {kq}";
+    }
+}
+
+<h1>Luu toa do diem</h1>
+<form method="POST">
+    <h4>Nhap toa do diem A</h4>
+    <label for="" xA"">Toa do X</label>
+    <input type="text" name="xA" id="xA" />
+    <label for="" yA"">Toa do Y</label>
+    <input type="text" name="yA" id="yA" />
+    <br />
+
+    <input type="submit" value="Luu" />
+</form>
+<p>@chuoi</p>

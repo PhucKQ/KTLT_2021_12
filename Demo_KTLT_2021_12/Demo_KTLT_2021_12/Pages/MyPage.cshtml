@@ -1,0 +1,74 @@
+﻿@page
+@model Demo_KTLT_2021_12.Pages.Index1Model
+@{
+    /*
+    int a;
+    int b;
+
+    a = 10;
+    b = 300;
+
+    if (Request.HasFormContentType)
+    {
+        a = int.Parse(Request.Form["bienA"]);
+        b = int.Parse(Request.Form["bienB"]);
+    }
+
+    int s = a + b;
+    string chuoi = "Ket qua la " + s;
+    string currentTime = $"Current time is {DateTime.Now}";
+    */
+
+    int tuSo1 = 1;
+    int mauSo1 = 1;
+    int tuSo2 = 1;
+    int mauSo2 = 1;
+
+    if (Request.HasFormContentType)
+    {
+        tuSo1 = int.Parse(Request.Form["tuSo1"]);
+        mauSo1 = int.Parse(Request.Form["mauSo1"]);
+        tuSo2 = int.Parse(Request.Form["tuSo2"]);
+        mauSo2 = int.Parse(Request.Form["mauSo2"]);
+    }
+
+    int tuKQ = tuSo1 * mauSo2 + tuSo2 * mauSo1;
+    int mauKQ = mauSo1 * mauSo2;
+    string kq = $"Ket qua la {tuKQ}/{mauKQ}";
+}
+
+<!--
+<form method="POST">
+    <label for="fname">Nhap a:</label><br>
+    <input type="text" id="fname" name="bienA"><br>
+    <label for="lname">Nhap b:</label><br>
+    <input type="text" id="lname" name="bienB"><br><br>
+    <input type="submit" value="Tinh">
+</form>
+<br />
+<p>chuoi</p>
+<p>currentTime</p>
+-->
+
+<div>
+    <h2>Tinh tong 2 phan so</h2>
+    <form method="POST">
+        <h4>Nhap phan so thu nhat</h4>
+        <label for="tuSo1">Nhap tu so:</label><br />
+        <input type="text" id="tuSo1" name="tuSo1"><br />
+        <label for="mauSo1">Nhap mau so:</label><br />
+        <input type="text" id="mauSo1" name="mauSo1"><br /><br />
+
+        <h4>Nhap phan so thu hai</h4>
+        <label for="tuSo2">Nhap tu so:</label><br />
+        <input type="text" id="tuSo2" name="tuSo2"><br />
+        <label for="mauSo2">Nhap mau so:</label><br />
+        <input type="text" id="mauSo2" name="mauSo2"><br /><br />
+
+        <input type="submit" value="Tinh tong hai phan so">
+    </form>
+</div>
+<br />
+<p>@kq</p>
+
+

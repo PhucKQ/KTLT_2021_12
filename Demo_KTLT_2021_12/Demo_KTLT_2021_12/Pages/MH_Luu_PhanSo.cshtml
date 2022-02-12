@@ -1,0 +1,43 @@
+﻿@page
+@model Demo_KTLT_2021_12.Pages.MH_Cong_2_PhanSoModel
+@using Demo_KTLT_2021_12.Services
+@using Demo_KTLT_2021_12.Entities
+@{
+    PHANSO a;//, b;
+    string chuoi = String.Empty;
+
+    //if (Request.Method = "POST")
+    if (Request.HasFormContentType)
+    {
+        a.TuSo = int.Parse(Request.Form["tuSo1"]);
+        a.MauSo = int.Parse(Request.Form["mauSo1"]);
+
+        //b.TuSo = int.Parse(Request.Form["tuSo2"]);
+        //b.MauSo = int.Parse(Request.Form["mauSo2"]);
+
+        bool kq = XL_PhanSo.LuuPhanSo(a);
+        chuoi = $"ket qua luu la {kq}";
+    }
+}
+
+<h1>Tinh tong 2 phan so</h1>
+<form method="POST">
+    <h4>Nhap phan so thu nhat</h4>
+    <label for="" tuSo1"">Nhap tu so thu nhat</label>
+    <input type="text" name="tuSo1" id="tuSo1" />
+    <label for="" mauSo1"">Nhap mau so thu nhat</label>
+    <input type="text" name="mauSo1" id="mauSo1" />
+    <br />
+
+    <!--
+    <h4>Nhap phan so thu hai</h4>
+    <label for="" tuSo2"">Nhap tu so thu hai</label>
+    <input type="text" name="tuSo2" id="tuSo2" />
+    <label for="" mauSo1"">Nhap mau so thu 2</label>
+    <input type="text" name="mauSo2" id="mauSo2" />
+    <br />
+    -->
+    <input type="submit" value="Luu" />
+</form>
+<p>@chuoi</p>
+

@@ -1,0 +1,40 @@
+﻿@page
+@model Demo_KTLT_2021_12.Pages.MH_TinhKhoangCach2DiemModel
+@using Demo_KTLT_2021_12.Services
+@using Demo_KTLT_2021_12.Entities
+@{
+    string chuoi = String.Empty;
+    DIEM a, b;
+
+    if (Request.HasFormContentType)
+    {
+        a.X = int.Parse(Request.Form["xA"]);
+        a.Y = int.Parse(Request.Form["yA"]);
+        b.X = int.Parse(Request.Form["xB"]);
+        b.Y = int.Parse(Request.Form["yB"]);
+
+        double kq = XL_Diem.TinhKhoangCach(a, b);
+        chuoi = $"ket qua la {kq}";
+    }
+
+}
+
+<h1>Tinh khoang cach 2 diem</h1>
+<form method="POST">
+    <h4>Nhap toa do diem A</h4>
+    <label for="" xA"">Toa do X</label>
+    <input type="text" name="xA" id="xA" />
+    <label for="" yA"">Toa do Y</label>
+    <input type="text" name="yA" id="yA" />
+    <br />
+
+    <h4>Nhap toa do diem B</h4>
+    <label for="" xB"">Toa do X</label>
+    <input type="text" name="xB" id="xB" />
+    <label for="" yA"">Toa do Y</label>
+    <input type="text" name="yB" id="yB" />
+    <br />
+
+    <input type="submit" value="Tinh" />
+</form>
+<p>@chuoi</p>
