@@ -20,5 +20,24 @@ namespace Demo_KTLT_2021_12.Services
             LuuTruDiem.Luu(a);
             return true;
         }
+
+        public static DIEM DocDiem()
+        {
+            DIEM kq;
+            kq = LuuTruDiem.Doc();
+
+            return kq;
+        }
+
+        public static DIEM KhoiTao(string s)
+        {
+            s = s.Substring(1, s.Length - 2);
+            string[] chuoi = s.Split(",");
+            DIEM a;
+            a.X = int.Parse(chuoi[0]);
+            a.Y = int.Parse(chuoi[1]);
+
+            return a;
+        }
     }
 }

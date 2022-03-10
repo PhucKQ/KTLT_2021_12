@@ -1,0 +1,15 @@
+﻿@page
+@model Demo_KTLT_2021_12.Pages.MH_Doc_DiemModel
+@using Demo_KTLT_2021_12.Services
+@using Demo_KTLT_2021_12.Entities
+@{
+    string chuoi = string.Empty;
+    DIEM a;
+
+    a = XL_Diem.DocDiem();
+    chuoi = $"Ket qua luu la ({a.X}, {a.Y})";
+}
+
+<div>
+    @chuoi
+</div>

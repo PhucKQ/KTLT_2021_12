@@ -362,3 +362,8 @@ C:\CODE\KTLT_2021_12\Demo_KTLT_2021_12\Demo_KTLT_2021_12\obj\Debug\net5.0\Razor\
 C:\CODE\KTLT_2021_12\Demo_KTLT_2021_12\Demo_KTLT_2021_12\obj\Debug\net5.0\Razor\Pages\MH_Luu_Diem.cshtml.g.cs
 C:\CODE\KTLT_2021_12\Demo_KTLT_2021_12\Demo_KTLT_2021_12\obj\Debug\net5.0\Razor\Pages\MH_Luu_PhanSo.cshtml.g.cs
 C:\CODE\KTLT_2021_12\Demo_KTLT_2021_12\Demo_KTLT_2021_12\obj\Debug\net5.0\Razor\Pages\MH_Luu_TamGiac.cshtml.g.cs
+C:\CODE\KTLT_2021_12\Demo_KTLT_2021_12\Demo_KTLT_2021_12\obj\Debug\net5.0\Razor\Pages\MH_Doc_Diem.cshtml.g.cs
+C:\CODE\KTLT_2021_12\Demo_KTLT_2021_12\Demo_KTLT_2021_12\obj\Debug\net5.0\Razor\Pages\MH_Doc_TamGiac.cshtml.g.cs
+C:\CODE\KTLT_2021_12\Demo_KTLT_2021_12\Demo_KTLT_2021_12\obj\Debug\net5.0\Razor\Pages\MH_Doc_DaGiac.cshtml.g.cs
+C:\CODE\KTLT_2021_12\Demo_KTLT_2021_12\Demo_KTLT_2021_12\obj\Debug\net5.0\Razor\Pages\MH_Luu_DaGiac.cshtml.g.cs
+C:\CODE\KTLT_2021_12\Demo_KTLT_2021_12\Demo_KTLT_2021_12\bin\Debug\net5.0\Newtonsoft.Json.dll

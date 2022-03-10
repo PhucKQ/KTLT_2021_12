@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "e8YfKrZGw+Fq2ef6EwTfuQ/AV7cpT/F+9AzjtxwNQDw9XPB5YEoarxF3vybgeKs1PCwqeDlH33s4KOZ6qSAg0Q==",
+  "dgSpecHash": "weSJT7+3vbaOtkklfxhJOEfujpdZ2aQ3UzKCdb8GzBkyrXq4S0xKu1j41b1+7cKUkxdqYq1Oi4r7C2hTWMcWZg==",
   "success": true,
   "projectFilePath": "C:\\CODE\\KTLT_2021_12\\Demo_KTLT_2021_12\\Demo_KTLT_2021_12\\Demo_KTLT_2021_12.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\AMD Ryzen 3600\\.nuget\\packages\\microsoft.codeanalysis.razor\\5.0.12\\microsoft.codeanalysis.razor.5.0.12.nupkg.sha512",
     "C:\\Users\\AMD Ryzen 3600\\.nuget\\packages\\microsoft.extensions.dependencymodel\\5.0.0\\microsoft.extensions.dependencymodel.5.0.0.nupkg.sha512",
     "C:\\Users\\AMD Ryzen 3600\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
+    "C:\\Users\\AMD Ryzen 3600\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\AMD Ryzen 3600\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\AMD Ryzen 3600\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\AMD Ryzen 3600\\.nuget\\packages\\system.reflection.metadata\\5.0.0\\system.reflection.metadata.5.0.0.nupkg.sha512",

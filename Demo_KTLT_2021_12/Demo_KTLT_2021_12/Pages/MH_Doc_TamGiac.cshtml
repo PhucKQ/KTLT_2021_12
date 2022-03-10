@@ -1,0 +1,22 @@
+﻿@page
+@model Demo_KTLT_2021_12.Pages.MH_Doc_TamGiacModel
+@using Demo_KTLT_2021_12.Services
+@using Demo_KTLT_2021_12.Entities
+@{
+    string chuoi = string.Empty;
+    TAMGIAC t;
+
+    t = XL_TamGiac.DocTamGiac();
+    chuoi = $"Ket qua luu la: " +
+                $"\n ({t.A.X},{t.A.Y})" +
+                $"\n ({t.B.X},{t.B.Y})" +
+                $"\n ({t.C.X},{t.C.Y})";
+
+}
+<div>
+    @chuoi
+</div>
+
+<div style="white-space: pre-line">
+    @chuoi
+</div>

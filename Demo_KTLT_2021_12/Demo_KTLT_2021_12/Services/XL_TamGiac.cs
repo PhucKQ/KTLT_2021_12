@@ -39,5 +39,13 @@ namespace Demo_KTLT_2021_12.Services
 
             return true;
         }
+
+        public static TAMGIAC DocTamGiac()
+        {
+            TAMGIAC t;
+            t = LuuTruTamGiac.Doc();
+
+            return t;
+        }
     }
 }

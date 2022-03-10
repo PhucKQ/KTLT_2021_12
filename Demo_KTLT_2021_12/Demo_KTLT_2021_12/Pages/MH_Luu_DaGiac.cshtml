@@ -1,0 +1,26 @@
+﻿@page
+@model Demo_KTLT_2021_12.Pages.MH_Luu_DaGiacModel
+@using Demo_KTLT_2021_12.Services
+@using Demo_KTLT_2021_12.Entities
+@{
+    string chuoi = String.Empty;
+
+    if (Request.HasFormContentType)
+    {
+        string chuoiDinh = Request.Form["dinh"];
+        DAGIAC d = XL_DaGiac.KhoiTao(chuoiDinh);
+        bool kq = XL_DaGiac.LuuDaGiac(d);
+        chuoi = $"ket qua la {kq}";
+    }
+}
+
+<form method="post" action="">
+    <h4>Nhap so luong dinh cua da giac</h4>
+    <input type="text" name="dinh" value="(4,5)|(1,6)|(3,7)|(4,1)" />
+    <input type="submit" value="Luu" />
+</form>
+@chuoi
+
+
+
+

@@ -1,0 +1,18 @@
+﻿@page
+@model Demo_KTLT_2021_12.Pages.Index1Model
+@using Demo_KTLT_2021_12.Services
+@using Demo_KTLT_2021_12.Entities
+@{
+    string chuoi = string.Empty;
+    DAGIAC d;
+    d = XL_DaGiac.DocDaGiac();
+    chuoi = $"Ket qua luu la: ";
+    for (int i = 0; i < d.dsDinh.Length; i++)
+    {
+        chuoi += $"\n({d.dsDinh[i].X}, {d.dsDinh[i].Y})";
+    }
+
+}
+<div style="white-space: pre-line">
+    @chuoi
+</div>
