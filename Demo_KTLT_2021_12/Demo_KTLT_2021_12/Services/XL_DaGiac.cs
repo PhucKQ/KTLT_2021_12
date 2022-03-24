@@ -37,5 +37,17 @@ namespace Demo_KTLT_2021_12.Services
 
             return d;
         }
+
+        public static double TinhChuVi(DAGIAC d)
+        {
+            double kq = 0;
+            for (int i = 0; i < d.dsDinh.Length - 1; i++)
+            {
+                kq += XL_Diem.TinhKhoangCach(d.dsDinh[i], d.dsDinh[i + 1]);
+            }
+            kq += XL_Diem.TinhKhoangCach(d.dsDinh[d.dsDinh.Length-1], d.dsDinh[0]);
+
+            return kq;
+        }
     }
 }

@@ -1,0 +1,32 @@
+﻿@page
+@model Demo_KTLT_2021_12.Pages.MH_TinhChuVi_DaGiacModel
+@using Demo_KTLT_2021_12.Entities
+@using Demo_KTLT_2021_12.Services
+
+    <h1>Tinh chu vi da giac </h1>
+    <form method="POST">
+        <h4>Nhap toa do cac dinh</h4>
+        <label for="xA">Toa do X</label>
+        <input type="text" name="chuoiDinh" id="xA" value="@Model.chuoiDinh" />
+        <br />
+
+        <input type="submit" value="Tinh" />
+    </form>
+    <br />
+    <table>
+        <tr>
+            <th>X</th>
+            <th>Y</th>
+        </tr>
+        @foreach (DIEM diem in Model.d.dsDinh)
+        {
+        <tr>
+            <td>@diem.X</td>
+            <td>@diem.Y</td>
+        </tr>
+        }
+    </table>
+
+    @*<div>@diem.X, @diem.Y</div>*@
+     <p>@Model.Chuoi</p>
+

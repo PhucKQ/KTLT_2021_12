@@ -2,48 +2,48 @@
 @model Demo_KTLT_2021_12.Pages.MH_TinhChuVi_TamGiacModel
 @using Demo_KTLT_2021_12.Services
 @using Demo_KTLT_2021_12.Entities
+
 @{
-    string chuoi = String.Empty;
-    TAMGIAC t;
+//string chuoi = String.Empty;
+//TAMGIAC t;
 
-    if (Request.HasFormContentType)
-    {
-        t.A.X = int.Parse(Request.Form["xA"]);
-        t.A.Y = int.Parse(Request.Form["yA"]);
-        t.B.X = int.Parse(Request.Form["xB"]);
-        t.B.Y = int.Parse(Request.Form["yB"]);
-        t.C.X = int.Parse(Request.Form["xC"]);
-        t.C.Y = int.Parse(Request.Form["yC"]);
+//if (Request.HasFormContentType)
+//{
+//    t.A.X = int.Parse(Request.Form["xA"]);
+//    t.A.Y = int.Parse(Request.Form["yA"]);
+//    t.B.X = int.Parse(Request.Form["xB"]);
+//    t.B.Y = int.Parse(Request.Form["yB"]);
+//    t.C.X = int.Parse(Request.Form["xC"]);
+//    t.C.Y = int.Parse(Request.Form["yC"]);
 
-        double kq = XL_TamGiac.TinhChuVi(t);
-        chuoi = $"ket qua la {kq}";
-    }
-
+//    double kq = XL_TamGiac.TinhChuVi(t);
+//    chuoi = $"ket qua la {kq}";
+//}
 }
 
 <h1>Tinh chu vi tam giac ABC</h1>
 <form method="POST">
     <h4>Nhap toa do diem A</h4>
     <label for="xA">Toa do X</label>
-    <input type="text" name="xA" id="xA" />
+    <input type="text" name="xA" id="xA" value="@Model.t.A.X"/>
     <label for="yA">Toa do Y</label>
-    <input type="text" name="yA" id="yA" />
+    <input type="text" name="yA" id="yA" value="@Model.t.A.Y"/>
     <br />
 
     <h4>Nhap toa do diem B</h4>
     <label for="xB">Toa do X</label>
-    <input type="text" name="xB" id="xB" />
+    <input type="text" name="xB" id="xB" value="@Model.t.B.X"/>
     <label for="yA">Toa do Y</label>
-    <input type="text" name="yB" id="yB" />
+    <input type="text" name="yB" id="yB" value="@Model.t.B.Y"/>
     <br />
 
     <h4>Nhap toa do diem C</h4>
     <label for="xC">Toa do X</label>
-    <input type="text" name="xC" id="xC" />
+    <input type="text" name="xC" id="xC" value="@Model.t.C.X"/>
     <label for="yC">Toa do Y</label>
-    <input type="text" name="yC" id="yC" />
+    <input type="text" name="yC" id="yC" value="@Model.t.C.Y"/>
     <br />
 
     <input type="submit" value="Tinh" />
 </form>
-<p>@chuoi</p>
+<p>@Model.Chuoi</p>
