@@ -1,0 +1,41 @@
+﻿@page
+@model Demo_KTLT_2021_12.Pages.MH_DanhSachSanPhamModel
+@using Demo_KTLT_2021_12.Entities
+@{
+}
+<h1>Quản lý Sản Phẩm</h1>
+<a href="/MH_TaoSanPham">Thêm sản phẩm mới</a>
+<br />
+<br />
+<form method="post">
+    <label for="">Nhap tu khoa: </label>
+    <input type="text" name="tukhoa" value="" />
+    <br />
+
+    <button type="submit">Tim Kiem</button>
+</form>
+
+<br />
+<br />
+
+<table>
+    <tr>
+        <th>Mã Sản phẩm</th>
+        <th>Tên Sản phẩm</th>
+        <th>Giá</th>
+        <th></th>
+    </tr>
+    @foreach (SanPham sp in Model.dsSanPham)
+    {
+    <tr>
+        <td>@sp.MaSanPham</td>
+        <td>@sp.TenSanPham</td>
+        <td>@sp.Gia</td>
+        <td>
+            <a href="/MH_SuaSanPham?id=@sp.MaSanPham">Sửa</a>
+            |
+            <a href="/MH_XoaSanPham?id=@sp.MaSanPham">Xóa</a>
+        </td>
+    </tr>
+    }
+</table>

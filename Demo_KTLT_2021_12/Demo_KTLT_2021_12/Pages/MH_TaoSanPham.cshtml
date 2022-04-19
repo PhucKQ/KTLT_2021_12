@@ -1,0 +1,28 @@
+﻿@page
+@model Demo_KTLT_2021_12.Pages.MH_Tao_SanPhamModel
+@{
+}
+
+<form method="post">
+    <label for="MaSanPham">Nhap Ma san pham: </label>
+    <br />
+    <input type="text" name="MaSanPham"
+           id="@Model.MaSanPham" value="" />
+    <br />
+    <label for="TenSanPham">Nhap Ten san pham: </label>
+    <br />
+    <input type="text" name="TenSanPham"
+           id="@Model.TenSanPham" value="" />
+    <br />
+    <label for="GiaSanPham">Nhap Gia san pham: </label>
+    <br />
+    <input type="text" name="GiaSanPham"
+           id="@Model.GiaSanPham" value="" />
+    <br />
+
+    <div class="my-3">
+        <button type="submit" class="btn btn-success">Tạo</button>
+        <a href="/MH_DanhSachSanPham" class="btn btn-info" style="text-decoration: none;">Hủy</a>
+    </div>
+</form>
+@Model.Chuoi

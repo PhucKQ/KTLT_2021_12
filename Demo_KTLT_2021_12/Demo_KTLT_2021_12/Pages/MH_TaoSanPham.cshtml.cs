@@ -9,25 +9,30 @@ using Demo_KTLT_2021_12.Services;
 
 namespace Demo_KTLT_2021_12.Pages
 {
-    public class MH_TinhChuVi_DaGiacModel : PageModel
+    public class MH_Tao_SanPhamModel : PageModel
     {
         public string Chuoi;
-        public DAGIAC d;
+
         [BindProperty]
-        public string ChuoiDinh { get; set; }
+        public string TenSanPham { get; set; }
+        [BindProperty]
+        public string MaSanPham { get; set; }
+        [BindProperty]
+        public int GiaSanPham { get; set; }
 
         public void OnGet()
         {
             Chuoi = string.Empty;
-            ChuoiDinh = "(0,2)|(3,1)|(2,4)|(1,0)";
-            d = XL_DaGiac.KhoiTao(ChuoiDinh);
         }
 
         public void OnPost()
         {
-            //d = XL_DaGiac.KhoiTao(chuoiDinh);
-            double kq = XL_DaGiac.TinhChuVi(d);
-            Chuoi = $"Ket qua la: {kq}";
+            SanPham p;
+            p.MaSanPham = MaSanPham;
+            p.TenSanPham = TenSanPham;
+            p.Gia = GiaSanPham;
+            bool kq = XuLySanPham.TaoSanPham(p);
+            Chuoi = $"ket qua la {kq}";
         }
     }
 }

@@ -1,0 +1,36 @@
+﻿@page
+@model Demo_KTLT_2021_12.Pages.MH_XoaSanPhamModel
+@{
+}
+
+@if (Model.coSanPham)
+{
+    <h3>Xóa sản phẩm @Model.SanPham.TenSanPham ?</h3>
+    <table>
+        <tr>
+            <th>Mã Sản phẩm</th>
+            <th>Tên Sản phẩm</th>
+            <th>Giá</th>
+        </tr>
+        <tr>
+            <td>@Model.SanPham.MaSanPham</td>
+            <td>@Model.SanPham.TenSanPham</td>
+            <td>@Model.SanPham.Gia</td>
+        </tr>
+    </table>
+    <br />
+    <div class="text-right">
+        <form method="post">
+            <button type="submit" id="@Model.XacNhan" value="true" class="btn btn-danger">
+                Xác nhận
+            </button>
+
+            <a href="/MH_DanhSachSanPham" class="btn btn-info" style="text-decoration: none;">Hủy</a>
+</form>
+
+</div>
+}
+else
+{
+    @Model.Chuoi 
+}
