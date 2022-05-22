@@ -18,17 +18,21 @@
             <td>@Model.SanPham.Gia</td>
         </tr>
     </table>
+
     <br />
+
     <div class="text-right">
         <form method="post">
-            <button type="submit" id="@Model.XacNhan" value="true" class="btn btn-danger">
+            <button type="submit" id="@Model.XacNhan" 
+                    value="true" class="btn btn-danger">
                 Xác nhận
             </button>
 
-            <a href="/MH_DanhSachSanPham" class="btn btn-info" style="text-decoration: none;">Hủy</a>
-</form>
-
-</div>
+            <a href="/MH_DanhSachSanPham" 
+               class="btn btn-info" style="
+                text-decoration: none;">Hủy</a>
+        </form>
+    </div>
 }
 else
 {

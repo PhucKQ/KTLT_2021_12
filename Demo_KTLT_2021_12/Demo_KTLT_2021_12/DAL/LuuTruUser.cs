@@ -11,7 +11,7 @@ namespace Demo_KTLT_2021_12.DAL
 {
     public class LuuTruUser
     {
-        public static bool LuuUser(User u)
+        public static bool TaoMoiUser(User u)
         {
             List<User> dsUser =
                 DocDanhSachUser();
@@ -24,7 +24,7 @@ namespace Demo_KTLT_2021_12.DAL
         public static List<User> DocDanhSachUser()
         {
             StreamReader reader = new StreamReader
-                ("\\user.json");
+                ("./DAL/user.json");
             string jsonString = reader.ReadToEnd();
             reader.Close();
 
@@ -38,7 +38,7 @@ namespace Demo_KTLT_2021_12.DAL
             (List<User> dsUser)
         {
             StreamWriter writer = new StreamWriter
-                ("\\user.json");
+                ("./DAL/user.json");
 
             string jsonString = JsonConvert.
                 SerializeObject(dsUser);
@@ -46,6 +46,20 @@ namespace Demo_KTLT_2021_12.DAL
             writer.Close();
 
             return true;
+        }
+
+        public static User? TimUser(User findUser)
+        {
+            List<User> dsUser = DocDanhSachUser();
+            foreach(User user in dsUser)
+            {
+                if (user.Username == findUser.Username)
+                {
+                    return user;
+                }
+            }
+
+            return null;
         }
     }
 }

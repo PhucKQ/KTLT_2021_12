@@ -374,3 +374,5 @@ C:\CODE\KTLT_2021_12\Demo_KTLT_2021_12\Demo_KTLT_2021_12\obj\Debug\net5.0\Razor\
 C:\CODE\KTLT_2021_12\Demo_KTLT_2021_12\Demo_KTLT_2021_12\obj\Debug\net5.0\Razor\Pages\MH_SuaSanPham.cshtml.g.cs
 C:\CODE\KTLT_2021_12\Demo_KTLT_2021_12\Demo_KTLT_2021_12\obj\Debug\net5.0\Razor\Pages\MH_XoaSanPham.cshtml.g.cs
 C:\CODE\KTLT_2021_12\Demo_KTLT_2021_12\Demo_KTLT_2021_12\obj\Debug\net5.0\Razor\Pages\MH_DangKy.cshtml.g.cs
+C:\CODE\KTLT_2021_12\Demo_KTLT_2021_12\Demo_KTLT_2021_12\obj\Debug\net5.0\Razor\Pages\MH_DangNhap.cshtml.g.cs
+C:\CODE\KTLT_2021_12\Demo_KTLT_2021_12\Demo_KTLT_2021_12\bin\Debug\net5.0\DAL\user.json

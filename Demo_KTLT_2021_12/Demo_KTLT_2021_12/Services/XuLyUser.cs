@@ -21,7 +21,19 @@ namespace Demo_KTLT_2021_12.Services
             }
 
             //LuuSanPham
-            return LuuTruUser.LuuUser(user);
+            return LuuTruUser.TaoMoiUser(user);
+        }
+
+        public static User? DangNhap(string username, string password)
+        {
+            if (string.IsNullOrWhiteSpace(username) ||
+                string.IsNullOrWhiteSpace(password))
+            {
+                return null;
+            }
+
+
+            return null;
         }
     }
 }

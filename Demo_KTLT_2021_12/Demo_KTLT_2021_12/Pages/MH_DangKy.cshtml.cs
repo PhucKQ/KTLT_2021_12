@@ -12,7 +12,6 @@ namespace Demo_KTLT_2021_12.Pages
     public class MH_DangKyModel : PageModel
     {
         public string Chuoi = string.Empty;
-        public User newUser;
 
         [BindProperty]
         public string FName { get; set; }
@@ -29,11 +28,13 @@ namespace Demo_KTLT_2021_12.Pages
 
         public void OnPost()
         {
+            User newUser = new User();
             newUser.FirstName = FName;
             newUser.LastName = LName;
             newUser.Username = UserName;
             newUser.Password = Password;
             bool kq = XuLyUser.DangKy(newUser);
+
             if (kq)
             {
                 Response.Redirect("/MH_DanhSachSanPham");

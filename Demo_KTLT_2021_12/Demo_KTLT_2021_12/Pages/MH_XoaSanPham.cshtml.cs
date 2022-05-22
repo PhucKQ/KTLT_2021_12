@@ -13,17 +13,14 @@ namespace Demo_KTLT_2021_12.Pages
     {
         public string Chuoi;
         public bool coSanPham;
-        public SanPham SanPham { get; set; }
+        public SanPham SanPham;
 
         [BindProperty]
         public bool XacNhan { get; set; }
+
         [BindProperty (SupportsGet = true)]
         public string Id { get; set; }
-        [BindProperty]
-        public string TenSP { get; set; }
-        [BindProperty]
-        public string GiaSP { get; set; }
-
+        
         public void OnGet()
         {
             Chuoi = string.Empty;
